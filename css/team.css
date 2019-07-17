@@ -1,0 +1,532 @@
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+p {
+	margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	font-weight: normal;
+}
+
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	overflow: hidden;
+	min-width: 1100px;
+}
+
+.wrapper::after {
+	content: '';
+	display: block;
+	height: 76px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1060px;
+}
+
+
+.clearfix::after {
+	clear: both;
+}
+
+.clearfix::after, .clearfix::before {
+	content: '';
+	display: table;
+}
+
+.header {
+	background: #4b73b5;
+	min-height: 76px;
+	margin-bottom: 45px;
+}
+
+.header__top {
+	padding-top: 18px;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.header__left, .header__right {
+	width: 50%;
+	float: left;
+}
+
+.header__right {
+	text-align: right;
+}
+
+.phone, .worf-time {
+	display: block;
+}
+
+.phone, .work-time, .navigation__link, .bread__link, .pagination__link {
+	text-decoration: none;
+}
+
+.navigation__list, .bread__list, .reviews__list, .pagination__list {
+	list-style: none;
+}
+
+.phone {
+	color: #fff;
+	font-weight: 600;
+	font-size: 21px;
+}
+
+.work-time__title {
+	font-weight: 400;
+	color: #c9d5e9;
+	font-size: 14px;
+	padding-top: 1px;
+	text-decoration: underline;
+	display: block;
+}
+
+.work-time:hover .work-time__title {
+	color: #ffffff;
+}
+
+.drop-down {
+	width: 164px;
+    height: 81px;
+    display: none;
+}
+
+.drop-down__monday-sunday {
+	font-weight: 700;
+	color: #1c5bc3;
+	font-size: 14px;
+}
+
+.drop-down__dinner {
+	color: #221f1f;
+	font-weight: 300;
+	font-size: 14px;	
+}
+
+.sidebar {
+	width: 160px;
+	float: left;
+}
+
+.sidebar, .content {
+	float: left;
+}
+
+.navigation__item {
+	margin-bottom: 31px;
+}
+
+.navigation__list {
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.navigation__link {
+	color: #4b73b5;
+	text-transform: uppercase;
+	display: inline-block;
+	letter-spacing: 2px;
+}
+
+.navigation__link--main_icon:hover {
+	color: black;
+}
+
+.navigation__link--feed_icon:hover {
+	color: black;
+}
+
+.navigation__link--team_icon:hover {
+	color: black;
+}
+
+.navigation__link--main_icon:before {
+	content: "";
+	width: 17px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 22px;
+}
+
+.navigation__link--feed_icon:before {
+	content: "";
+	width: 20px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 19px;
+}
+
+.navigation__link--team_icon:before {
+	content: "";
+	width: 23px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 16px;
+}
+
+.navigation__link--main_icon {
+	
+    background: url('../img/main_icon1.png')0 0 no-repeat;
+
+    &:hover {
+    	background: url('../img/main_icon.png')0 0  no-repeat;
+    }
+}
+
+.navigation__link--feed_icon {
+	
+    background: url('../img/feed_icon.png')0 0 no-repeat;
+
+    &:hover {
+    	background: url('../img/star3.png')0 0 no-repeat;
+    }
+}
+
+.navigation__link--team_icon {
+	
+    background: url('../img/team_icon.png')0 0 no-repeat;
+
+    &:hover {
+    	background: url('../img/team3.png')0 0 no-repeat;
+    }
+}
+
+
+/* SPRITE */
+
+.navigation__link--main_icon:hover {
+	background: url('../img/css_sprites1.png')-47px -10px no-repeat;
+
+	&:hover{
+	background: url('../img/main_icon.png')-10px -10px no-repeat;
+}
+}
+
+.navigation__link--feed_icon:hover {
+	background: url('../img/star_sprites.png')-50px -10px no-repeat;
+	
+	&:hover{
+	background: url('../img/feed_icon.png')-10px -10px no-repeat;
+}
+}
+
+.navigation__link--team_icon:hover {
+	background: url('../img/team_sprites.png')-53px -10px no-repeat;
+	
+	&:hover{
+	background: url('../img/team_icon.png')-10px -10px no-repeat;
+}
+}
+
+.content {
+	width: 880px;
+	float: left;
+	margin-left: 20px;
+}
+
+.bread {
+	margin-bottom: 12px;
+}
+
+.bread__item {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.bread__item:after {
+	content: "/";
+}
+
+.bread__item:last-child:after {
+	display: none;
+}
+
+.bread__link {
+	color:  #1c5bc3;
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+
+.bread__link--active {
+	color: black;
+	text-decoration: none;
+}
+
+.team__list {
+	position: relative;
+}
+
+.team__item {
+	text-align: center;
+	display:inline-block;
+	vertical-align: top; 
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+.title {
+	color: #221f1f;
+	font-size: 49px;
+	font-weight: 700;
+	margin-bottom: 36px;
+}
+
+.partners {
+	width: 880px;
+	margin-bottom: 75px;
+}
+
+.person__img {
+	display: inline-block;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	margin-bottom: 16px;
+}
+
+.person__img--main-pilot {
+	background: #305490 url('../img/team/AviationCV.com_Pilot_Life1.jpg')center;
+	background-blend-mode: overlay;
+	opacity: 0.7;
+}
+
+.person__img--steward {
+	background: #305490 url('../img/team/vred-raboty-stuardessy.jpg')center;
+	background-blend-mode: overlay;
+	opacity: 0.7;
+}
+
+.person__img--aeromechaniс {
+	background: #305490 url('../img/team/main.jpg')center;
+	background-blend-mode: overlay;
+	opacity: 0.7;
+}
+
+.person__img--dispatcher {
+	background: #305490 url('../img/team/elina.jpg')center;
+	background-blend-mode: overlay;
+	opacity: 0.7;
+}
+
+.person__img--main-steward {
+	background: #305490 url('../img/team/vred-raboty-stuardessy2.jpg')center;
+	background-blend-mode: overlay;
+	opacity: 0.7;
+}
+
+.person__img--second-pilot {
+	background: #305490 url('../img/team/second-pilot1.jpg')center;
+	background-blend-mode: overlay;
+	opacity: 0.7;
+}
+.person__photo--name {
+	font-size: 24px;
+	font-weight: 500;
+	position: relative;
+	vertical-align: middle;
+	color: #fff;
+	padding: 66px 0;
+}
+
+.person__title {
+	color: #221f1f;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.person__post {
+	font-size: 14px;
+	font-weight: 400;
+	color: #4b73b5;
+	margin-bottom: 6px;
+}
+
+.person__description {
+	width: 260px;
+	text-align: center;
+	line-height: 1.7;
+	font-weight: 300;
+	font-size: 14px;	 
+}
+
+.partners__item {
+	display: inline-block;
+	margin-bottom: 62px;
+	margin-right: 110px;
+}
+
+.partners__list {
+	margin-left: 60px;
+}
+
+.partners__logos__icon {
+	width: 160px;
+	height: 64px;
+	display: block;
+}
+
+.partners__logos__icon--partner1 {
+	background: url('../img/team/logo-1.png')0 0 no-repeat;
+	margin: -13px;
+}
+
+.partners__logos__icon--partner1:hover {	 
+	background: url('../img/team/logo1.png')0 0 no-repeat;
+}
+
+
+.partners__logos__icon--partner2 {
+	background: url('../img/team/logo-2.png')0 0 no-repeat;
+}
+
+.partners__logos__icon--partner2:hover {	 
+	background: url('../img/team/logo2.png')0 0 no-repeat;
+}
+
+
+.partners__logos__icon--partner3 {
+	background: url('../img/team/sibir.png')0 0 no-repeat;
+}
+
+.partners__logos__icon--partner3:hover {	 
+	background: url('../img/team/sibir1.png')0 0 no-repeat;
+}
+
+.partners__logos__icon--partner4 {
+	background: url('../img/team/OneAir-1.png')0 0 no-repeat;
+}
+
+.partners__logos__icon--partner4:hover {	 
+	background: url('../img/team/OneAir1.png')0 0 no-repeat;
+}
+
+.partners__logos__icon--partner5 {
+	background: url('../img/team/BingAir.png')0 0 no-repeat;
+}
+
+.partners__logos__icon--partner5:hover {	 
+	background: url('../img/team/BingAir1.png')0 0 no-repeat;
+}
+
+.partners__logos__icon--partner6 {
+	background: url('../img/team/ural1.png')0 0 no-repeat;
+}
+
+.partners__logos__icon--partner6:hover {	 
+	background: url('../img/team/ural.png')0 0 no-repeat;
+}
+
+
+
+
+
+
+
+.footer {
+	min-width: 1100px;
+	box-sizing: border-box;
+	background-color: #4b73b5;
+	position: relative;
+	height: 76px;
+	margin-top: -76px;
+	padding-top: 15px;
+}
+
+.footer__copyright, .footer__logo, .footer__socials {
+	width: 33.3%;
+	float: left;
+}
+.footer__copyright {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.footer__logo {
+	text-align: center;
+}
+
+.footer__socials {
+	text-align: right;
+}
+
+.copyright {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.copyright__link {
+	color: #ffff;
+}
+
+.socials__link {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #d2def3;
+	position: relative;
+}
+
+.socials__item {
+	display: inline-block;
+}
+
+.socials__icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.socials {
+	display: inline-block;
+}
+
+.socials__list {
+	text-align: left;
+}
+
+.socials__title {
+	margin-bottom: 9px;
+	color: #ffff;
+	font-size: 14px;
+    font-weight: 500;
+}
+
+.socials__link:hover {
+	background-color: #fff;
+}
+
+
+
+
+
